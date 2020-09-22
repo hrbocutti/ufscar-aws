@@ -80,7 +80,7 @@ rerun this command to reinitialize your working directory. If you forget, other
 commands will detect it and remind you to do so if necessary.
 ```
 
-####Provisione o cluster EKS
+#### Provisione o cluster EKS
 
 ```shell script
 $ terraform apply
@@ -117,7 +117,7 @@ Se você estiver confortável com isso, confirme a execução com um `yes`.
 Este processo deve levar aproximadamente 10 minutos. 
 Após a aplicação bem-sucedida, seu terminal imprime as saídas definidas em `output.tf`.
 
-####Prepare o repositório ECR
+#### Prepare o repositório ECR
 
 Você pode criar um repositório para armazenar a imagem do docker.
 
@@ -138,13 +138,13 @@ $ aws ecr create-repository --repository-name wp-ufscar --region us-east-1
 }
 ```
 
-#####Tag docker
+##### Tag docker
 Exemplo: `$ docker tag ${IMAGE ID} ${REPOSITORY URL}`
 ```shell script
 $ docker tag d4105c7a3a46 049938869197.dkr.ecr.us-east-1.amazonaws.com/wp-ufscar
 ```
 
-#####Push image
+##### Push image
 
 Exemplo: `$ docker push ${REPOSITORY}`
 
@@ -152,7 +152,7 @@ Exemplo: `$ docker push ${REPOSITORY}`
 $ docker push 049938869197.dkr.ecr.us-east-1.amazonaws.com/wp-ufscar
 ```
 
-####Execute deploy to K8S
+#### Execute deploy to K8S
 
 Navegar até a pasta kubernets: `../configs/kubernets`
 
@@ -161,7 +161,7 @@ $ kubectl apply -f service.yaml
 ```
 
 
-##Troubleshooting
+## Troubleshooting
 
 - No basic auth credentials: [LINK-FIX](https://docs.aws.amazon.com/AmazonECR/latest/userguide/common-errors-docker.html)
 
