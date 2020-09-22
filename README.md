@@ -163,6 +163,10 @@ $ kubectl apply -f service.yaml
 
 ### Cognito
 
+Colocar os passos de configurações *****  Geanderson
+
+
+
 
 
 ## Troubleshooting
