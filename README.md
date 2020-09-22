@@ -11,6 +11,13 @@ Alunos:
 
 ![Arquitetura cloud AWS](https://raw.githubusercontent.com/hrbocutti/ufscar-aws/master/assets/arquitetura.png)
 
+### Criação de Bucket para o S3:
+<p>
+Criação do Bucket bibliotecareservas:
+<br>Inicialmente deverá ser selecionado o item Criar bucket.
+</p> 
+(https://raw.githubusercontent.com/hrbocutti/ufscar-aws/master/assets/criacao bucket 1.png)
+
 
 ### Configuração Aws:
 
