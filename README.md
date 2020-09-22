@@ -161,6 +161,8 @@ $ kubectl apply -f service.yaml
 ```
 
 
+## RDS
+
 ## Troubleshooting
 
 - No basic auth credentials: [LINK-FIX](https://docs.aws.amazon.com/AmazonECR/latest/userguide/common-errors-docker.html)
