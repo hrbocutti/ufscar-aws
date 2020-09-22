@@ -2,9 +2,9 @@
 
 Alunos:
 
-- Higor Bocutti <a href="google.com"><img alt="Github" title="hrbocutti" src="https://github.githubassets.com/images/icons/emoji/octocat.png" width="25"></a> 
-- Geanderson
-- Dalmo
+- Higor Bocutti <a href="https://github.com/hrbocutti"><img alt="Github" title="hrbocutti" src="https://github.githubassets.com/images/icons/emoji/octocat.png" width="25"></a> 
+- Geanderson Lopes <a href="https://github.com/GeandersonLopes"><img alt="Github" title="GeandersonLopes" src="https://github.githubassets.com/images/icons/emoji/octocat.png" width="25"></a>
+- Dalmo Tavares <a href="https://github.com/dalmost"><img alt="Github" title="dalmost" src="https://github.githubassets.com/images/icons/emoji/octocat.png" width="25"></a>
 
 ---
 ### Arquitetura Cloud
@@ -159,6 +159,10 @@ Navegar até a pasta kubernets: `../configs/kubernets`
 ```shell script
 $ kubectl apply -f service.yaml
 ```
+
+
+### Cognito
+
 
 
 ## Troubleshooting
