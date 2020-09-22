@@ -16,8 +16,65 @@ Alunos:
 Criação do Bucket bibliotecareservas:
 <br>Inicialmente deverá ser selecionado o item Criar bucket.
 </p> 
-(https://github.com/hrbocutti/ufscar-aws/blob/master/assets/criacao%20bucket%201.png)
 
+(https://raw.githubusercontent.com/hrbocutti/ufscar-aws/master/assets/criacao%20bucket%201.png)
+
+<p>
+Posteriormente deverá ser registrado o nome do bucket.
+</p> 
+
+(https://raw.githubusercontent.com/hrbocutti/ufscar-aws/master/assets/criacao%20bucket%202.png)
+
+<p>
+Informado o bloqueio ao acesso público.
+</p>
+
+(https://raw.githubusercontent.com/hrbocutti/ufscar-aws/master/assets/criacao%20bucket%203.png)
+
+<p>
+E para finalizar concluir a criação do Bucket.
+</p>
+
+(https://raw.githubusercontent.com/hrbocutti/ufscar-aws/master/assets/criacao%20bucket%204.png)
+
+<p>
+Com isso o Bucket foi criado com sucesso.
+</p>
+
+(https://raw.githubusercontent.com/hrbocutti/ufscar-aws/master/assets/criacao%20bucket%205.png)
+
+### Criação de Tabela Reserva - DynamoDB:
+
+<p>
+Criação do Tabela Reservas
+<br>Criação do indice ID Livro.
+</p> 
+
+(https://raw.githubusercontent.com/hrbocutti/ufscar-aws/master/assets/criacao%20dynamodb%201.png)
+
+<p>
+Será necessário informar o nome da tabela junto com o indice.
+</p>
+
+(https://raw.githubusercontent.com/hrbocutti/ufscar-aws/master/assets/criacao%20dynamodb%202.png)
+
+<p>
+Posteriormente deverá ser analisado a capacidade de leitura e de gravação.
+</p>
+
+(https://raw.githubusercontent.com/hrbocutti/ufscar-aws/master/assets/criacao%20dynamodb%203.png)
+
+<p>
+Para finalizar deverá ser realizado a conclusão da criação da tabela.
+</p>
+
+(https://raw.githubusercontent.com/hrbocutti/ufscar-aws/master/assets/criacao%20dynamodb%204.png)
+
+<p>
+Tabela Reservas criada com sucesso
+</p>
+
+(https://raw.githubusercontent.com/hrbocutti/ufscar-aws/master/assets/criacao%20dynamodb%205.png)
 
 ### Configuração Aws:
 
