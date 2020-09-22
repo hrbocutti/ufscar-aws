@@ -1,0 +1,50 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: wp-ufscar
+spec:
+  selector:
+    app: wp-ufscar
+  type: NodePort
+  ports:
+    - name: http
+      protocol: TCP
+      port: 80
+      targetPort: 80
+---
+apiVersion: apps/v1 # for versions before 1.9.0 use apps/v1beta2
+kind: Deployment
+metadata:
+  name: wp-ufscar
+  labels:
+    app: wp-ufscar
+spec:
+  selector:
+    matchLabels:
+      app: wp-ufscar
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        app: wp-ufscar
+    spec:
+      containers:
+        - name: wp-ufscar
+          image: 049938869197.dkr.ecr.us-east-1.amazonaws.com/wp-ufscar
+          ports:
+            - containerPort: 80
+          readinessProbe:
+            tcpSocket:
+              port: 80
+            initialDelaySeconds: 5
+            periodSeconds: 10
+          livenessProbe:
+            tcpSocket:
+              port: 80
+            initialDelaySeconds: 15
+            periodSeconds: 20
+          startupProbe:
+            tcpSocket:
+              port: 80
+            failureThreshold: 30
+            periodSeconds: 10
