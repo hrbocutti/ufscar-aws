@@ -152,6 +152,14 @@ Exemplo: `$ docker push ${REPOSITORY}`
 $ docker push 049938869197.dkr.ecr.us-east-1.amazonaws.com/wp-ufscar
 ```
 
+#### Configurar o kubectl para acessar o cluster
+
+Exemplo: `$ aws eks --region us-east-1 update-kubeconfig --name ufscar-qTKumoLe`
+
+```shell script
+$ aws eks --region ${region} update-kubeconfig --name ${cluster_name}
+```
+
 #### Execute deploy to K8S
 
 Navegar até a pasta kubernets: `../configs/kubernets`
@@ -159,20 +167,25 @@ Navegar até a pasta kubernets: `../configs/kubernets`
 ```shell script
 $ kubectl apply -f service.yaml
 ```
+##### Adicionar o loadbalancer para acesso externo da applicação
+
+Exemplo: `$ kubectl expose deployment wp-ufscar --type=LoadBalancer --name=lb-service`
+
+```shell script
+$ kubectl expose deployment ${deployment} --type=LoadBalancer --name=lb-service
+```
 
 
-<<<<<<< HEAD
-## RDS
-=======
-### Cognito
-
-Colocar os passos de configurações *****  Geanderson
 
 
 
 
->>>>>>> master
 
+
+
+
+
+---
 ## Troubleshooting
 
 - No basic auth credentials: [LINK-FIX](https://docs.aws.amazon.com/AmazonECR/latest/userguide/common-errors-docker.html)
