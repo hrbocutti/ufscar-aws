@@ -178,6 +178,9 @@ $ kubectl expose deployment ${deployment} --type=LoadBalancer --name=lb-service
 
 
 
+Cognito 
+
+
 
 
 
