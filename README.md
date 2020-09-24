@@ -184,38 +184,36 @@ $ kubectl expose deployment ${deployment} --type=LoadBalancer --name=lb-service
 
 ### Primeiro, é necessario a criação do User Pool
 
-`No campo Pool name é necessario colocar o nome do pool que vai ser criado, no caso`
+1.) `No campo Pool name é necessario colocar o nome do pool que vai ser criado, no caso`
 `criaremos com o nome de CognitoWord, após selecionar a opção "Step through settings".`
 
-`Na proxima tela selecionar Email address or phone number, após a opção "Alow email addresses",` 
+2.)`Na proxima tela selecionar Email address or phone number, após a opção "Alow email addresses",`
 `para esse caso o acesso e o login é feito por email.`
 
-`Na opção "Which standard attributes do you want to require?", selecionar "name" e "email", no` `momento do cadastro serão exigidos do usuario apenas o nome e o email.`
+3.) `Na opção "Which standard attributes do you want to require?", selecionar "name" e "email", no` `momento do cadastro serão exigidos do usuario apenas o nome e o email.`
 
-`Clicando no botão "Next step", ele vai para a proxima tela que seria "Policies", onde estão os` `opções de configuração da senha se a mesma vai ter letra, simbolos, números, quantidade de` `caracteres na senha e a quantidade de dias para expirar a senha. Todas essas opções serão padrão` `nessa pagina.`
+4.) `Clicando no botão "Next step", ele vai para a proxima tela que seria "Policies", onde estão os` `opções de configuração da senha se a mesma vai ter letra, simbolos, números, quantidade de` `caracteres na senha e a quantidade de dias para expirar a senha. Todas essas opções serão padrão` `nessa pagina.`
 
-`Clicando no botão "Next step", ele vai para a proxima tela que seria "MFA and verifications", ` `onde estão os opções de configuração de multiplus fatores (que não iremos ativar), essa opção é` `utilizada para login e verificação em dois pontos, devemos selecionar a opção "Optional". Após vem a opção de selecionar o SMS text message, para que a verificação seja feita em duas frentes a senha no site com o email e o envio de um numero por SMS.`
+5.) `Clicando no botão "Next step", ele vai para a proxima tela que seria "MFA and verifications", ` `onde estão os opções de configuração de multiplus fatores (que não iremos ativar), essa opção é` `utilizada para login e verificação em dois pontos, devemos selecionar a opção "Optional". Após vem a opção de selecionar o SMS text message, para que a verificação seja feita em duas frentes a senha no site com o email e o envio de um numero por SMS.`
 `A proxima opção é "How will a user be able to recover their account?", que seria de recuperação de senha, nessa opção selecionaremos "Email only" para que a senha seja recuperada por email.`
 `A proxima opção é "Which attributes do you want to verify?", que é selecionado o que será verificado para a recuperação da senha, nessa devemos selecionar "Email".`
 `A proxima opção "You must provide a role to allow Amazon Cognito to send SMS messages", onde devemos marcar a regra de envio de SMS, a regra ja vem por padrão a regra é a "CognitoWord-SMS-Role", após a criação é gerado o nome da regra "arn:aws:iam::326554917983:role/service-role/CognitoWord-SMS-Role".`
 
-`Clicando no botão "Next step", ele vai para a proxima tela que seria "Message customizations", onde é customizado o email e o SMS que serão enviados para o usuario que terá que fazer o acesso.`
+6.) `Clicando no botão "Next step", ele vai para a proxima tela que seria "Message customizations", onde é customizado o email e o SMS que serão enviados para o usuario que terá que fazer o acesso.`
 `Onde devem ser preenchido o SES Region (região Us East Virginia, onde é está sendo montado a estrutura por trás dessa parte).`
 `No endereço de email, colocar o endereço do email que vai receber a senha e será utilizado para o acesso.`
 `Na opção "Do you want to send emails through your Amazon SES Configuration?", utilizar a opção "No - Use Cognito (default)", onde será enviado um email padrão pelo Cognito, os demais campos continuam com os dados padrão.`
 
-`Clicando no botão "Next step", ele vai para a proxima tela que seria "Tag", onde você deve adicionar uma tag para poder idenficar qual user pool é de qual processo.`
+7.) `Clicando no botão "Next step", ele vai para a proxima tela que seria "Tag", onde você deve adicionar uma tag para poder idenficar qual user pool é de qual processo.`
 `Clicando em "Add tag", preencher no campo "Tag Key", "Identify" e no campo "Tag Value" colocar  "teste1".`
 
-`Clicando no botão "Next step", ele vai para a proxima tela que seria a de "Devices", essa opção é marcada para que o computador seja reconhecido quando conectar no login, selecionar "No".`
+8.) `Clicando no botão "Next step", ele vai para a proxima tela que seria a de "Devices", essa opção é marcada para que o computador seja reconhecido quando conectar no login, selecionar "No".`
 
-`Nas proximas opçãos teremos, não iremos selecionar nada mantendo os dados como os padrões ja pre-estabelecidos.`
+9.) `Nas proximas opçãos teremos, não iremos selecionar nada mantendo os dados como os padrões ja pre-estabelecidos.`
 
-`Por ultimo, teremos a tela de "Review", onde podemos checar os dados inputados para a criação do`
-`"User Pool", clicando no botão "Create Pool", ele cria o pool com os dados colocados acima.`
+10.) `Por ultimo, teremos a tela de "Review", onde podemos checar os dados inputados para a criação do``"User Pool", clicando no botão "Create Pool", ele cria o pool com os dados colocados acima.`
 
-`Após a criação é gerado os dados para os campos "Pool Id" que nesse caso é "us-east-1_DHHTFd2GJ",`
-`e o campo "Pool ARN" que tem o valor "arn:aws:cognito-idp:us-east-1:326554917983:userpool/` `us-east-1_DHHTFd2GJ", guardar esses valores para a utilização quando for feita a integração com os demais serviços a serem utilizados.`
+11.) `Após a criação é gerado os dados para os campos "Pool Id" que nesse caso é "us-east-1_DHHTFd2GJ",``e o campo "Pool ARN" que tem o valor "arn:aws:cognito-idp:us-east-1:326554917983:userpool/` `us-east-1_DHHTFd2GJ", guardar esses valores para a utilização quando for feita a integração com os demais serviços a serem utilizados.`
 
 
 ---
