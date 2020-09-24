@@ -178,7 +178,28 @@ $ kubectl expose deployment ${deployment} --type=LoadBalancer --name=lb-service
 
 
 
-Cognito 
+### Cognito:
+
+##### Acessar a AWS procurando o serviço Cognito
+
+Primeiro, é necessario a criação do User Pool
+
+No campo Pool name é necessario colocar o nome do pool que vai ser criado, no caso 
+criaremos com o nome de CognitoWord, após selecionar a opção "Step through settings".
+
+Na proxima tela selecionar "Email address or phone number", após a opção "Alow email addresses", 
+para esse caso o acesso e o login é feito por email.
+
+Na opção "Which standard attributes do you want to require?", selecionar "name" e "email", no momento do cadastro serão exigidos do usuario apenas o nome e o email.
+
+Clicando no botão "Next step", ele vai para a proxima tela que seria "Policies", onde estão os opções de configuração da senha se a mesma vai ter letra, simbolos, números, quantidade de caracteres na senha e a quantidade de dias para expirar a senha. Todas essas opções serão padrão nessa pagina.
+
+Clicando no botão "Next step", ele vai para a proxima tela que seria "MFA and verifications", onde estão os opções de configuração de multiplus fatores (que não iremos ativar), 
+
+
+
+
+
 
 
 
