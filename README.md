@@ -17,7 +17,7 @@ Criação do Bucket bibliotecareservas:
 <br>Inicialmente deverá ser selecionado o item Criar bucket.
 </p> 
 
-https://raw.githubusercontent.com/hrbocutti/ufscar-aws/master/assets/criacao%20bucket%201.png
+(https://raw.githubusercontent.com/hrbocutti/ufscar-aws/master/assets/criacao%20bucket%201.png)
 
 <p>
 Posteriormente deverá ser registrado o nome do bucket.
