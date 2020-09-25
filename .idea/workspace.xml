@@ -4,6 +4,8 @@
     <list default="true" id="3a381c36-75dc-4523-b638-17261ba30869" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/configs/terraform/terraform.tfstate" beforeDir="false" afterPath="$PROJECT_DIR$/configs/terraform/terraform.tfstate" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/configs/terraform/terraform.tfstate.backup" beforeDir="false" afterPath="$PROJECT_DIR$/configs/terraform/terraform.tfstate.backup" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -51,7 +53,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1600744516527</updated>
-      <workItem from="1600744517645" duration="10155000" />
+      <workItem from="1600744517645" duration="11386000" />
     </task>
     <servers />
   </component>
@@ -66,5 +68,9 @@
       <screen x="1366" y="0" width="1920" height="1080" />
     </state>
     <state x="1815" y="175" width="1022" height="737" key="SettingsEditor/72.99.1294.741/1366.0.1920.1080@1366.0.1920.1080" timestamp="1600746066986" />
+    <state x="1989" y="239" width="672" height="678" key="search.everywhere.popup" timestamp="1600827913089">
+      <screen x="1366" y="0" width="1920" height="1080" />
+    </state>
+    <state x="1989" y="239" width="672" height="678" key="search.everywhere.popup/72.99.1294.741/1366.0.1920.1080@1366.0.1920.1080" timestamp="1600827913089" />
   </component>
 </project>
