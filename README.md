@@ -211,7 +211,7 @@ Com isso o Bucket foi criado com sucesso.
 ### Criação de Tabela Reserva - DynamoDB:
 
 <p>
-<br>Criação do Tabela Reservas.
+<br>Criação da Tabela Reservas.
 <br>Criação do indice ID Livro.
 </p> 
 
