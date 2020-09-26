@@ -373,7 +373,7 @@ E para concluir as Regras são salvas.
 
 <p>
 Com a chave SSH deverá ser acessado o Putty, e deverá ser realizado as seguintes codificações,
-para criação do usuário de Banco de Dados. Acessar o endpoint da imagem abaixo.
+para criação do usuário de Banco de Dados. Anotar o endpoint da imagem abaixo, pois será utilizado.
 </p>
 
 ![Criar RDS21](https://raw.githubusercontent.com/hrbocutti/ufscar-aws/master/assets/RDS21.png)
