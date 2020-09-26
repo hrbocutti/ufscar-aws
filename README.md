@@ -174,6 +174,7 @@ Exemplo: `$ kubectl expose deployment wp-ufscar --type=LoadBalancer --name=lb-se
 $ kubectl expose deployment ${deployment} --type=LoadBalancer --name=lb-service
 ```
 
+
 ### Criação de Bucket para o S3:
 <p>
 Criação do Bucket bibliotecareservas:
@@ -206,10 +207,11 @@ Com isso o Bucket foi criado com sucesso.
 
 ![Bucket criado](https://raw.githubusercontent.com/hrbocutti/ufscar-aws/master/assets/criacao%20bucket%205.png)
 
+
 ### Criação de Tabela Reserva - DynamoDB:
 
 <p>
-<br>Criação do Tabela Reservas
+<br>Criação do Tabela Reservas.
 <br>Criação do indice ID Livro.
 </p> 
 
@@ -234,10 +236,245 @@ Para finalizar deverá ser realizado a conclusão da criação da tabela.
 ![Conclusão](https://raw.githubusercontent.com/hrbocutti/ufscar-aws/master/assets/criacao%20dynamodb%204.png)
 
 <p>
-Tabela Reservas criada com sucesso
+Tabela Reservas criada com sucesso.
 </p>
 
 ![Tabelas criadas](https://raw.githubusercontent.com/hrbocutti/ufscar-aws/master/assets/criacao%20dynamodb%205.png)
+
+
+### Criação do Banco de Dados MySQL com o RDS:
+
+<p>
+No Amazon RDS console AWS clicar no botão em destaque.
+</p>
+
+![Criar RDS1](https://raw.githubusercontent.com/hrbocutti/ufscar-aws/master/assets/RDS1.png)
+
+<p>
+Posteriormente escolher a opção MySQL.
+</p>
+
+![Criar RDS2](https://raw.githubusercontent.com/hrbocutti/ufscar-aws/master/assets/RDS2.png)
+
+<p>
+E escolher o Template Dev/Test.
+</p>
+
+![Criar RDS3](https://raw.githubusercontent.com/hrbocutti/ufscar-aws/master/assets/RDS3.png)
+
+<p>
+Criar usuário e senha para acesso ao Banco de Dados.
+</p>
+
+![Criar RDS4](https://raw.githubusercontent.com/hrbocutti/ufscar-aws/master/assets/RDS4.png)
+
+<p>
+Posteriormente atribuir a instância como na imagem.
+</p>
+
+![Criar RDS5](https://raw.githubusercontent.com/hrbocutti/ufscar-aws/master/assets/RDS5.png)
+
+<p>
+Como último passo realizar os procedimentos abaixo nas configurações adicionais.
+</p>
+
+![Criar RDS6](https://raw.githubusercontent.com/hrbocutti/ufscar-aws/master/assets/RDS6.png)
+
+<p>
+E concluir a criação do Banco de Dados.
+</p>
+
+![Criar RDS7](https://raw.githubusercontent.com/hrbocutti/ufscar-aws/master/assets/RDS7.png)
+
+<p>
+Banco de Dados criado com sucesso.
+</p>
+
+![Criar RDS8](https://raw.githubusercontent.com/hrbocutti/ufscar-aws/master/assets/RDS8.png)
+
+
+## Criação da Instância no EC2:
+
+<p>
+Inicialmente executar a instância.
+</p>
+
+![Criar RDS9](https://raw.githubusercontent.com/hrbocutti/ufscar-aws/master/assets/RDS9.png)
+
+<p>
+Posteriormente escolher a Amazon Machine Image.
+</p>
+
+![Criar RDS10](https://raw.githubusercontent.com/hrbocutti/ufscar-aws/master/assets/RDS10.png)
+
+<p>
+Logo após o tipo da instância.
+</p>
+
+![Criar RDS11](https://raw.githubusercontent.com/hrbocutti/ufscar-aws/master/assets/RDS11.png)
+
+<p>
+Deverá ser configurado o Grupo de Segurança da Instância.
+</p>
+
+![Criar RDS12](https://raw.githubusercontent.com/hrbocutti/ufscar-aws/master/assets/RDS12.png)
+
+<p>
+Posteriormente deverá ser concluído a configuração.
+</p>
+
+![Criar RDS13](https://raw.githubusercontent.com/hrbocutti/ufscar-aws/master/assets/RDS13.png)
+
+<p>
+Neste momento será criado uma chave SSH.
+</p>
+
+![Criar RDS14](https://raw.githubusercontent.com/hrbocutti/ufscar-aws/master/assets/RDS14.png)
+
+<p>
+Deverá ser realizado o Download do Key Pair.
+</p>
+
+![Criar RDS15](https://raw.githubusercontent.com/hrbocutti/ufscar-aws/master/assets/RDS15.png)
+
+<p>
+E por último executar a Instância.
+</p>
+
+![Criar RDS16](https://raw.githubusercontent.com/hrbocutti/ufscar-aws/master/assets/RDS16.png)
+
+## Configuração do Banco de Dados RDS:
+
+<p>
+Deverá ser permitido que a Instância do EC2 acesse ao Banco de Dados.
+</p>
+
+![Criar RDS17](https://raw.githubusercontent.com/hrbocutti/ufscar-aws/master/assets/RDS17.png)
+
+<p>
+Vá até a Guia Conectividade e Segurança e clique no Grupo de Segurança listado em VPC.
+</p>
+
+![Criar RDS18](https://raw.githubusercontent.com/hrbocutti/ufscar-aws/master/assets/RDS18.png)
+
+<p>
+Posteriormente deverá ser configurado as Regras de Entrada.
+</p>
+
+![Criar RDS19](https://raw.githubusercontent.com/hrbocutti/ufscar-aws/master/assets/RDS19.png)
+
+<p>
+E para concluir as Regras são salvas.
+</p>
+
+![Criar RDS20](https://raw.githubusercontent.com/hrbocutti/ufscar-aws/master/assets/RDS20.png)
+
+<p>
+Com a chave SSH deverá ser acessado o Putty, e deverá ser realizado as seguintes codificações,
+para criação do usuário de Banco de Dados. Acessar o endpoint da imagem abaixo.
+</p>
+
+![Criar RDS21](https://raw.githubusercontent.com/hrbocutti/ufscar-aws/master/assets/RDS21.png)
+
+```shell script
+sudo yum install -y mysql
+export MYSQL_HOST=wordpress.c6shsuwztqdl.us-east-1.rds.amazonaws.com
+mysql --user=admin --password=Reservas wordpress
+```
+
+<p>
+Posteriormente os seguintes comandos deverão ser executados.
+</p>
+
+```shell script
+CREATE USER 'wordpress' IDENTIFIED BY 'reservas';
+GRANT ALL PRIVILEGES ON wordpress.* TO wordpress;
+FLUSH PRIVILEGES;
+Exit
+```
+
+## Configuração do Wordpress no EC2:
+
+<p>
+Para instalação do servidor Web Apache, deverá ser executado o comando abaixo. 
+</p>
+
+```shell script
+sudo yum install -y httpd
+```
+<p>
+Posteriormente o seguinte endereço Public DNS poderá ser acessado para verificar uma página
+de Teste do Apache.
+</p>
+
+![Criar RDS22](https://raw.githubusercontent.com/hrbocutti/ufscar-aws/master/assets/RDS22.png)
+
+![Criar RDS23](https://raw.githubusercontent.com/hrbocutti/ufscar-aws/master/assets/RDS23.png)
+
+<p>
+Para realizar o download e configuração do Wordpress as seguintes codificações deverão ser
+realizadas.
+</p>
+
+```shell script
+wget https://wordpress.org/latest.tar.gz
+tar -xzf latest.tar.gz
+```
+<p>
+Posteriormente abrir o arquivo nano e realizar as configurações abaixo.
+</p>
+
+```shell script
+nano wp-config.php
+```
+
+```shell script
+// ** MySQL settings - You can get this info from your web host ** //
+/** The name of the database for WordPress */
+define( 'DB_NAME', 'wordpress' );
+
+/** MySQL database username */
+define( 'DB_USER', 'wordpress' );
+
+/** MySQL database password */
+define( 'DB_PASSWORD', 'password_here' );
+
+/** MySQL hostname */
+define( 'DB_HOST', 'localhost' );
+```
+
+![Criar RDS24](https://raw.githubusercontent.com/hrbocutti/ufscar-aws/master/assets/RDS24.png)
+
+<p>
+Para finalizar os seguintes comandos deverão ser executados para instalar as 
+dependências para o aplicativo do WordPress.
+</p>
+
+```shell script
+sudo amazon-linux-extras install -y lamp-mariadb10.2-php7.2 php7.2
+cd /home/ec2-user
+sudo cp -r wordpress/* /var/www/html/
+sudo service httpd restart
+```
+
+<p>
+Posteriormente será possível ver a página inicial do Wordpress e o processo
+de instalação.
+</p>
+
+![Criar RDS25](https://raw.githubusercontent.com/hrbocutti/ufscar-aws/master/assets/RDS25.png)
+
+![Criar RDS26](https://raw.githubusercontent.com/hrbocutti/ufscar-aws/master/assets/RDS26.png)
+
+<p>
+Após estes procedimentos a instalação do WordPress se encontra ativa e acessível ao público com o 
+objetivo para a Reserva de Livros.
+</p>
+
+![Criar RDS27](https://raw.githubusercontent.com/hrbocutti/ufscar-aws/master/assets/RDS27.png)
+
+![Criar RDS28](https://raw.githubusercontent.com/hrbocutti/ufscar-aws/master/assets/RDS28.png)
+
 
 ### Cognito:
 
