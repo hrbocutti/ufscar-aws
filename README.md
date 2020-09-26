@@ -242,7 +242,9 @@ Tabela Reservas criada com sucesso.
 ![Tabelas criadas](https://raw.githubusercontent.com/hrbocutti/ufscar-aws/master/assets/criacao%20dynamodb%205.png)
 
 
-### Criação do Banco de Dados MySQL com o RDS:
+### Implantação do WordPress com o Amazon RDS:
+
+#### Criação do Banco de Dados MySQL com o RDS:
 
 <p>
 No Amazon RDS console AWS clicar no botão em destaque.
@@ -293,7 +295,7 @@ Banco de Dados criado com sucesso.
 ![Criar RDS8](https://raw.githubusercontent.com/hrbocutti/ufscar-aws/master/assets/RDS8.png)
 
 
-## Criação da Instância no EC2:
+#### Criação da Instância no EC2:
 
 <p>
 Inicialmente executar a instância.
@@ -343,7 +345,7 @@ E por último executar a Instância.
 
 ![Criar RDS16](https://raw.githubusercontent.com/hrbocutti/ufscar-aws/master/assets/RDS16.png)
 
-## Configuração do Banco de Dados RDS:
+#### Configuração do Banco de Dados RDS:
 
 <p>
 Deverá ser permitido que a Instância do EC2 acesse ao Banco de Dados.
@@ -393,7 +395,7 @@ FLUSH PRIVILEGES;
 Exit
 ```
 
-## Configuração do Wordpress no EC2:
+#### Configuração do Wordpress no EC2:
 
 <p>
 Para instalação do servidor Web Apache, deverá ser executado o comando abaixo. 
