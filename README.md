@@ -539,41 +539,29 @@ Clicando em "Add tag", preencher no campo "Tag Key", "Identify" e no campo "Tag 
 ![Criar Cognito11](https://raw.githubusercontent.com/hrbocutti/ufscar-aws/master/assets/cognito11.png)
 
 
-9.)Nas proximas opçãos teremos, não iremos selecionar nada mantendo os dados como os padrões ja pre-estabelecidos.
+9.)Nos proximos passos iremos configurar o nosso app client para visualização dos nossos testes, 
+primeiro iremos designar o nome do app e o id do mesmo conforme a imagem abaixo.
 
 ![Criar Cognito12](https://raw.githubusercontent.com/hrbocutti/ufscar-aws/master/assets/cognito12.png)
 ![Criar Cognito13](https://raw.githubusercontent.com/hrbocutti/ufscar-aws/master/assets/cognito13.png)
 
 
-10.)Nos proximos passos iremos configurar o nosso app client para visualização dos nossos testes, 
-primeiro iremos designar o nome do app e o id do mesmo conforme a imagem abaixo.
+10.)Agora a configuração do Domain que será usado de teste para a nossa conexão, colocar no nome no local indicado na imagem e o mesmo checará se é um domain valido ou não.
 
 ![Criar Cognito14](https://raw.githubusercontent.com/hrbocutti/ufscar-aws/master/assets/cognito14.png)
 ![Criar Cognito15](https://raw.githubusercontent.com/hrbocutti/ufscar-aws/master/assets/cognito15.png)
 
 
-
-11.)Agora a configuração do Domain que será usado de teste para a nossa conexão, colocar no nome no local indicado na imagem e o mesmo checará se é um domain valido ou não.
+11.)Nesse passo mostraremos como é a configuração da interface de usuario, escolhemos apenas uma figura para o fundo da tela e os demais itens permaneceram conforme o padrão.
 ![Criar Cognito16](https://raw.githubusercontent.com/hrbocutti/ufscar-aws/master/assets/cognito16.png)
 
 
 
-12.)Nesse passo mostraremos como é a configuração da interface de usuario, escolhemos apenas uma figura para o fundo da tela e os demais itens permaneceram conforme o padrão.
+12.)Agora criaremos um resource servers para sustentar a nossa pagina de teste.
 ![Criar Cognito17](https://raw.githubusercontent.com/hrbocutti/ufscar-aws/master/assets/cognito17.png)
 
 
-
-13.)Agora criaremos um resource servers para sustentar a nossa pagina de teste.
-![Criar Cognito18](https://raw.githubusercontent.com/hrbocutti/ufscar-aws/master/assets/cognito18.png)
-
-
-
-14.)Por ultimo, teremos a tela de "Review", onde podemos checar os dados inputados para a criação do "User Pool", clicando no botão "Create Pool", ele cria o pool com os dados colocados acima.
-![Criar Cognito19](https://raw.githubusercontent.com/hrbocutti/ufscar-aws/master/assets/cognito19.png)
-
-
-
-15.)Após toda essa configuração, a exibição esperada é a das sequencia abaixo.
+13.)Após toda essa configuração, a exibição do site de teste esperada seria a sequencia de telas abaixo.
 
 ![Criar Cognito19](https://raw.githubusercontent.com/hrbocutti/ufscar-aws/master/assets/cognito19.png)
 
@@ -584,6 +572,15 @@ primeiro iremos designar o nome do app e o id do mesmo conforme a imagem abaixo.
 ![Criar Cognito22](https://raw.githubusercontent.com/hrbocutti/ufscar-aws/master/assets/cognito22.png)
 
 ![Criar Cognito23](https://raw.githubusercontent.com/hrbocutti/ufscar-aws/master/assets/cognito23.png)
+
+
+14.) Na console da AWS, a configuração dos serviço e tem que ser exibida da seguinte maneira.
+
+![Criar Cognito18](https://raw.githubusercontent.com/hrbocutti/ufscar-aws/master/assets/cognito18.png)
+
+![Criar Cognito24](https://raw.githubusercontent.com/hrbocutti/ufscar-aws/master/assets/cognito24.png)
+
+![Criar Cognito25](https://raw.githubusercontent.com/hrbocutti/ufscar-aws/master/assets/cognito25.png)
 
 
 ---
