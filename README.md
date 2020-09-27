@@ -2,9 +2,12 @@
 
 Alunos:
 
-- Higor Bocutti <a href="https://github.com/hrbocutti"><img alt="Github" title="hrbocutti" src="https://github.githubassets.com/images/icons/emoji/octocat.png" width="25"></a> 
-- Geanderson Braga Lopes <a href="https://github.com/GeandersonLopes"><img alt="Github" title="GeandersonLopes" src="https://github.githubassets.com/images/icons/emoji/octocat.png" width="25"></a>
-- Dalmo Tavares <a href="https://github.com/dalmost"><img alt="Github" title="dalmost" src="https://github.githubassets.com/images/icons/emoji/octocat.png" width="25"></a>
+- Dalmo Tavares - RA. 18456045 <a href="https://github.com/dalmost"><img alt="Github" title="dalmost" src="https://github.githubassets.com/images/icons/emoji/octocat.png" width="25"></a>
+
+- Geanderson Braga Lopes - RA. 18356062  <a href="https://github.com/GeandersonLopes"><img alt="Github" title="GeandersonLopes" src="https://github.githubassets.com/images/icons/emoji/octocat.png" width="25"></a> 
+
+- Higor Bocutti - RA. 18356070 <a href="https://github.com/hrbocutti"><img alt="Github" title="hrbocutti" src="https://github.githubassets.com/images/icons/emoji/octocat.png" width="25"></a> 
+
 
 ---
 ### Arquitetura Cloud
@@ -484,37 +487,109 @@ objetivo para a Reserva de Livros.
 
 ### Primeiro, é necessario a criação do User Pool
 
-1.) `No campo Pool name é necessario colocar o nome do pool que vai ser criado, no caso`
-`criaremos com o nome de CognitoWord, após selecionar a opção "Step through settings".`
+<p>
+1.)No campo Pool name é necessario colocar o nome do pool que vai ser criado, no caso
+criaremos com o nome de CognitoWord, após selecionar a opção "Step through settings".
+</p>
 
-2.)`Na proxima tela selecionar Email address or phone number, após a opção "Alow email addresses",`
-`para esse caso o acesso e o login é feito por email.`
+<p>
+2.)Na proxima tela selecionar Email address or phone number, após a opção "Alow email addresses",
+para esse caso o acesso e o login é feito por email.
+![Criar Cognito3](https://raw.githubusercontent.com/hrbocutti/ufscar-aws/master/assets/cognito3.png)
+</p>
 
-3.) `Na opção "Which standard attributes do you want to require?", selecionar "name" e "email", no` `momento do cadastro serão exigidos do usuario apenas o nome e o email.`
+<p>
+3.)Na opção "Which standard attributes do you want to require?", selecionar "name" e "email", no momento do cadastro serão exigidos do usuario apenas o nome e o email.
+![Criar Cognito3](https://raw.githubusercontent.com/hrbocutti/ufscar-aws/master/assets/cognito3.png)
+</p>
 
-4.) `Clicando no botão "Next step", ele vai para a proxima tela que seria "Policies", onde estão os` `opções de configuração da senha se a mesma vai ter letra, simbolos, números, quantidade de` `caracteres na senha e a quantidade de dias para expirar a senha. Todas essas opções serão padrão` `nessa pagina.`
+<p>
+4.) Clicando no botão "Next step", ele vai para a proxima tela que seria "Policies", onde estão os opções de configuração da senha se a mesma vai ter letra, simbolos, números, quantidade de caracteres na senha e a quantidade de dias para expirar a senha. Todas essas opções serão padrão nessa pagina.
+![Criar Cognito4](https://raw.githubusercontent.com/hrbocutti/ufscar-aws/master/assets/cognito4.png)
+</p>
 
-5.) `Clicando no botão "Next step", ele vai para a proxima tela que seria "MFA and verifications", ` `onde estão os opções de configuração de multiplus fatores (que não iremos ativar), essa opção é` `utilizada para login e verificação em dois pontos, devemos selecionar a opção "Optional". Após vem a opção de selecionar o SMS text message, para que a verificação seja feita em duas frentes a senha no site com o email e o envio de um numero por SMS.`
-`A proxima opção é "How will a user be able to recover their account?", que seria de recuperação de senha, nessa opção selecionaremos "Email only" para que a senha seja recuperada por email.`
-`A proxima opção é "Which attributes do you want to verify?", que é selecionado o que será verificado para a recuperação da senha, nessa devemos selecionar "Email".`
-`A proxima opção "You must provide a role to allow Amazon Cognito to send SMS messages", onde devemos marcar a regra de envio de SMS, a regra ja vem por padrão a regra é a "CognitoWord-SMS-Role", após a criação é gerado o nome da regra "arn:aws:iam::326554917983:role/service-role/CognitoWord-SMS-Role".`
+<p>
+5.)Clicando no botão "Next step", ele vai para a proxima tela que seria "MFA and verifications",  onde estão os opções de configuração de multiplus fatores (que não iremos ativar), essa opção é utilizada para login e verificação em dois pontos, devemos selecionar a opção "Optional". Após vem a opção de selecionar o SMS text message, para que a verificação seja feita em duas frentes a senha no site com o email e o envio de um numero por SMS.
+A proxima opção é "How will a user be able to recover their account?", que seria de recuperação de senha, nessa opção selecionaremos "Email only" para que a senha seja recuperada por email.
+A proxima opção é "Which attributes do you want to verify?", que é selecionado o que será verificado para a recuperação da senha, nessa devemos selecionar "Email".
+A proxima opção "You must provide a role to allow Amazon Cognito to send SMS messages", onde devemos marcar a regra de envio de SMS, a regra ja vem por padrão a regra é a "CognitoWord-SMS-Role", após a criação é gerado o nome da regra "arn:aws:iam::326554917983:role/service-role/CognitoWord-SMS-Role".
+<p>
+![Criar Cognito5](https://raw.githubusercontent.com/hrbocutti/ufscar-aws/master/assets/cognito5.png)
+<p>
+![Criar Cognito6](https://raw.githubusercontent.com/hrbocutti/ufscar-aws/master/assets/cognito6.png)
+</p>
 
-6.) `Clicando no botão "Next step", ele vai para a proxima tela que seria "Message customizations", onde é customizado o email e o SMS que serão enviados para o usuario que terá que fazer o acesso.`
-`Onde devem ser preenchido o SES Region (região Us East Virginia, onde é está sendo montado a estrutura por trás dessa parte).`
-`No endereço de email, colocar o endereço do email que vai receber a senha e será utilizado para o acesso.`
-`Na opção "Do you want to send emails through your Amazon SES Configuration?", utilizar a opção "No - Use Cognito (default)", onde será enviado um email padrão pelo Cognito, os demais campos continuam com os dados padrão.`
+<p>
+6.) Clicando no botão "Next step", ele vai para a proxima tela que seria "Message customizations", onde é customizado o email e o SMS que serão enviados para o usuario que terá que fazer o acesso.
+Onde devem ser preenchido o SES Region (região Us East Virginia, onde é está sendo montado a estrutura por trás dessa parte).
+No endereço de email, colocar o endereço do email que vai receber a senha e será utilizado para o acesso.
+Na opção "Do you want to send emails through your Amazon SES Configuration?", utilizar a opção "No - Use Cognito (default)", onde será enviado um email padrão pelo Cognito, os demais campos continuam com os dados padrão.
+<p>
+![Criar Cognito8](https://raw.githubusercontent.com/hrbocutti/ufscar-aws/master/assets/cognito8.png)
+<p>
+![Criar Cognito9](https://raw.githubusercontent.com/hrbocutti/ufscar-aws/master/assets/cognito9.png)
+<p>
+![Criar Cognito10](https://raw.githubusercontent.com/hrbocutti/ufscar-aws/master/assets/cognito10.png)
+</p>
 
-7.) `Clicando no botão "Next step", ele vai para a proxima tela que seria "Tag", onde você deve adicionar uma tag para poder idenficar qual user pool é de qual processo.`
-`Clicando em "Add tag", preencher no campo "Tag Key", "Identify" e no campo "Tag Value" colocar  "teste1".`
+<p>
+7.) Clicando no botão "Next step", ele vai para a proxima tela que seria "Tag", onde você deve adicionar uma tag para poder idenficar qual user pool é de qual processo.
+Clicando em "Add tag", preencher no campo "Tag Key", "Identify" e no campo "Tag Value" colocar  "teste1".
 
-8.) `Clicando no botão "Next step", ele vai para a proxima tela que seria a de "Devices", essa opção é marcada para que o computador seja reconhecido quando conectar no login, selecionar "No".`
+<p>
+8.)Clicando no botão "Next step", ele vai para a proxima tela que seria a de "Devices", essa opção é marcada para que o computador seja reconhecido quando conectar no login, selecionar "No".
+<p>
+![Criar Cognito11](https://raw.githubusercontent.com/hrbocutti/ufscar-aws/master/assets/cognito11.png)
+</p>
 
-9.) `Nas proximas opçãos teremos, não iremos selecionar nada mantendo os dados como os padrões ja pre-estabelecidos.`
+<p>
+9.)Nas proximas opçãos teremos, não iremos selecionar nada mantendo os dados como os padrões ja pre-estabelecidos.
+<p>
+![Criar Cognito12](https://raw.githubusercontent.com/hrbocutti/ufscar-aws/master/assets/cognito12.png)
+![Criar Cognito13](https://raw.githubusercontent.com/hrbocutti/ufscar-aws/master/assets/cognito13.png)
+</p>
 
-10.) `Por ultimo, teremos a tela de "Review", onde podemos checar os dados inputados para a criação do``"User Pool", clicando no botão "Create Pool", ele cria o pool com os dados colocados acima.`
+<p>
+10.)Nos proximos passos iremos configurar o nosso app client para visualização dos nossos testes, 
+primeiro iremos designar o nome do app e o id do mesmo conforme a imagem abaixo.
+<p>
+![Criar Cognito14](https://raw.githubusercontent.com/hrbocutti/ufscar-aws/master/assets/cognito14.png)
+![Criar Cognito15](https://raw.githubusercontent.com/hrbocutti/ufscar-aws/master/assets/cognito15.png)
+</p>
 
-11.) `Após a criação é gerado os dados para os campos "Pool Id" que nesse caso é "us-east-1_DHHTFd2GJ",``e o campo "Pool ARN" que tem o valor "arn:aws:cognito-idp:us-east-1:326554917983:userpool/` `us-east-1_DHHTFd2GJ", guardar esses valores para a utilização quando for feita a integração com os demais serviços a serem utilizados.`
+<p>
+11.)Agora a configuração do Domain que será usado de teste para a nossa conexão, colocar no nome no local indicado na imagem e o mesmo checará se é um domain valido ou não.
+![Criar Cognito16](https://raw.githubusercontent.com/hrbocutti/ufscar-aws/master/assets/cognito16.png)
+</p>
 
+<p>
+12.)Nesse passo mostraremos como é a configuração da interface de usuario, escolhemos apenas uma figura para o fundo da tela e os demais itens permaneceram conforme o padrão.
+![Criar Cognito17](https://raw.githubusercontent.com/hrbocutti/ufscar-aws/master/assets/cognito17.png)
+</p>
+
+<p>
+13.)Agora criaremos um resource servers para sustentar a nossa pagina de teste.
+![Criar Cognito18](https://raw.githubusercontent.com/hrbocutti/ufscar-aws/master/assets/cognito18.png)
+</p>
+
+<p>
+14.)Por ultimo, teremos a tela de "Review", onde podemos checar os dados inputados para a criação do "User Pool", clicando no botão "Create Pool", ele cria o pool com os dados colocados acima.
+![Criar Cognito19](https://raw.githubusercontent.com/hrbocutti/ufscar-aws/master/assets/cognito19.png)
+</p>
+
+<p>
+15.)Após toda essa configuração, a exibição esperada é a das sequencia abaixo.
+<p>
+![Criar Cognito19](https://raw.githubusercontent.com/hrbocutti/ufscar-aws/master/assets/cognito19.png)
+<p>
+![Criar Cognito20](https://raw.githubusercontent.com/hrbocutti/ufscar-aws/master/assets/cognito20.png)
+<p>
+![Criar Cognito21](https://raw.githubusercontent.com/hrbocutti/ufscar-aws/master/assets/cognito21.png)
+<p>
+![Criar Cognito22](https://raw.githubusercontent.com/hrbocutti/ufscar-aws/master/assets/cognito22.png)
+<p>
+![Criar Cognito23](https://raw.githubusercontent.com/hrbocutti/ufscar-aws/master/assets/cognito23.png)
+</p>
 
 ---
 ## Troubleshooting
