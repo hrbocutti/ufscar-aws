@@ -490,6 +490,7 @@ objetivo para a Reserva de Livros.
 
 1.)No campo Pool name é necessario colocar o nome do pool que vai ser criado, no caso
 criaremos com o nome de CognitoWord, após selecionar a opção "Step through settings".
+![Criar Cognito26](https://raw.githubusercontent.com/hrbocutti/ufscar-aws/master/assets/cognito26.png)
 
 
 
@@ -499,7 +500,7 @@ para esse caso o acesso e o login é feito por email.
 
 
 
-3.)Na opção "Which standard attributes do you want to require?", selecionar "name" e "email", no momento do cadastro serão exigidos do usuario apenas o nome e o email.
+3.)Na opção "Which standard attributes do you want to require?", selecionar "email", no momento do cadastro serão exigidos do usuario apenas o nome e o email.
 ![Criar Cognito3](https://raw.githubusercontent.com/hrbocutti/ufscar-aws/master/assets/cognito3.png)
 
 
@@ -532,6 +533,8 @@ Na opção "Do you want to send emails through your Amazon SES Configuration?", 
 
 7.) Clicando no botão "Next step", ele vai para a proxima tela que seria "Tag", onde você deve adicionar uma tag para poder idenficar qual user pool é de qual processo.
 Clicando em "Add tag", preencher no campo "Tag Key", "Identify" e no campo "Tag Value" colocar  "teste1".
+![Criar Cognito27](https://raw.githubusercontent.com/hrbocutti/ufscar-aws/master/assets/cognito27.png)
+
 
 
 8.)Clicando no botão "Next step", ele vai para a proxima tela que seria a de "Devices", essa opção é marcada para que o computador seja reconhecido quando conectar no login, selecionar "No".
